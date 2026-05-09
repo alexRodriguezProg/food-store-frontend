@@ -1,7 +1,5 @@
-import { Routes, Route, Link } from 'react-router-dom'
-import CategoriasPage from './pages/CategoriasPage'
-import IngredientesPage from './pages/IngredientesPage'
-import ProductosPage from './pages/ProductosPage'
+import { Link } from 'react-router-dom'
+import AppRouter from './router/AppRouter'
 
 function App() {
   return (
@@ -15,12 +13,7 @@ function App() {
         </div>
       </nav>
       <main className="max-w-6xl mx-auto px-4 py-8">
-        <Routes>
-          <Route path="/" element={<CategoriasPage />} />
-          <Route path="/categorias" element={<CategoriasPage />} />
-          <Route path="/ingredientes" element={<IngredientesPage />} />
-          <Route path="/productos" element={<ProductosPage />} />
-        </Routes>
+        <AppRouter />
       </main>
     </div>
   )
